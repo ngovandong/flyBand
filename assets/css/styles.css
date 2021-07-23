@@ -1,0 +1,279 @@
+/* reset css */
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+}
+
+header{
+    height: 46px;
+    width: 100%;
+    background-color:black;
+    text-transform: uppercase;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header nav{
+    display: inline-block;
+}
+nav li {
+    display: inline-block;
+    position: relative;
+}
+
+nav .subnav{
+    display: none; 
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 3px 10px gray;
+}
+
+nav li:hover .subnav{
+    display: block;
+}
+nav a{
+    display: inline-block;
+    color:white;
+    text-decoration: solid;
+    height: 46px;
+    padding: 12px 24px;
+}
+
+nav .subnav a{
+    color: black;
+    min-width: 160px;
+}
+
+nav li:hover > a{
+    background-color: #ccc;
+    color: black;
+}
+
+ header .fa.fa-search {
+    font-size: 15px;
+    color: white;
+    
+}
+
+header .search{
+    float: right;
+    height: 100%;
+    padding: 12px 24px;
+}
+
+header .search:hover{
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+main{
+    height: 1000px;
+
+}
+
+
+.slider{
+    width: 100%;
+    margin-top: 46px;
+    padding-top: 50%;
+    background:  linear-gradient(0,rgba(20, 20, 20, 0.6),rgba(20, 20, 20, 0.6)), url(/assets/image/slider1.png) top center /cover no-repeat;
+    position: relative;
+    z-index: -1;
+}
+
+.slider .text-content{
+    text-align: center;
+    color: white;
+    position: absolute;
+    bottom: 32px;
+    width: 100%;
+}
+
+.text-content h2 {
+    margin: 10px;
+    font-size: 24px;
+}
+
+.text-content p {
+    font-weight: 700;
+}
+
+.main-content{
+    text-align: center;
+}
+
+.main-content section{
+    padding: 64px 0;
+}
+.about{
+    width: 800px;
+    
+    margin: 0 auto;
+}
+
+.main-content section h2 {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+.main-content section .subhead{
+    margin-bottom: 15px;
+    font-style: italic;
+    font-family: 'Open Sans', sans-serif;
+    opacity: 0.6;
+    letter-spacing: 1px;
+    margin: 30px  0;
+}
+.about .introduce{
+    text-align: justify;
+    line-height: 1.5;
+    margin: 10px auto;
+}
+
+
+
+
+.about .people{
+    float: left;
+    display: block;
+}
+
+
+
+
+.band{
+    display: block;
+    padding: 32px 0;
+    
+}
+.band::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.band img{
+    width: 60%;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+.band p{
+    margin: 15px 0;
+}
+
+
+.booking{
+    background-color: black;
+    color: white;
+}
+
+.booking li{
+    background-color: white;
+    color: rgb(117, 117, 117);
+    border-bottom: rgb(221, 221, 221)  1px solid;
+    padding: 8px 16px;
+    list-style: none;
+    text-align: left;
+}
+
+.booking .blackBackground{
+    width: 800px;
+    margin: 0 auto 64px;
+}
+
+.booking .soldout{
+    width: 54px;
+    height: 22px;
+    padding: 0 8px;
+    margin-left: 16px;
+    color: white;
+    background-color: #f44336;
+    text-align: center;
+}
+
+.booking .sold{
+    margin-right: 16px;
+    float: right;
+    border-radius: 50%;
+    background-color: black;
+    color:white;
+    padding: 0 8px;
+    line-height: 22.5px;
+}
+
+.place{
+    margin: 32px -8px 0;
+}
+.place img{
+    height: 184px;
+    width: 100%;
+    background-size: contain;
+    display: block;
+    opacity: 0.7;
+}
+
+.place img:hover{
+    opacity: 0.5;
+}
+
+.place .detail{
+    color: black;
+    background-color: white;
+    padding: 0.15px 16px;
+}
+
+.place .place-item{
+    width: 33.2%;
+    float: left;
+    padding: 0 8px;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.booking .place::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.place .Name{
+    font-weight: bolder;
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+.place .schedule{
+    color: rgb(117, 117, 117);
+    margin: 15px 0;
+}
+
+.place .address{
+    margin: 15px 0;
+}
+
+.place button{
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 108px;
+    height: 38px;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    border: 0;
+}
+
+.place button:hover{
+    background-color: #ccc;
+    color:black;
+}
