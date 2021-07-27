@@ -106,10 +106,12 @@ header .search:hover{
     text-align: center;
 }
 
-.main-content section{
-    padding: 64px 0;
+.main-content section,
+.cover-detail{
+    max-width: 100%;
     width: 800px;
-    margin: 0 auto;
+    margin: 32px auto;
+    padding: 32px 16px;
 }
 
 
@@ -160,8 +162,8 @@ header .search:hover{
 .band img{
     margin-bottom: 16px;
     border-radius: 4px;
-    width: 153px;
-    height: 153px;
+    width: 180px;
+    height: 200px;
 }
 
 .band p{
@@ -186,7 +188,7 @@ header .search:hover{
 }
 
 .blackBackground{
-    width: 800px;
+    width: 100%;
     margin: 0 auto 64px;
 }
 
@@ -244,6 +246,8 @@ header .search:hover{
     margin-bottom: 16px;
     text-align: left;
 }
+
+
 
 .booking .place::after{
     content: "";
@@ -388,28 +392,26 @@ header .search:hover{
     color: #2196F3;
 }
 
-.contact-detail i{
+.cover-detail i{
     margin-right: 16px;
+
 }
-.contact-detail p{
+.cover-detail p{
     font-size: 18px;
     font-weight: 500;
     text-align: left;
     line-height: 1.8;
 }
-.contact-detail a{
+.cover-detail a{
     color:#f44336;
 }
-.contact-detail a:visited{
+.cover-detail a:visited{
     color:#2196F3;
 }
-.contact-detail button{
-    color: black !important;
-    background-color: white !important;
-}
 
-.contact-detail .left,
-.contact-detail .right{
+
+.cover-detail .left,
+.cover-detail .right{
     display: block;
     margin-bottom: 16px;
     width: 49.9%;
@@ -454,7 +456,7 @@ form .full-input{
     margin: 16px 0;
     background-color: black;
     color: white;
-    border: 0;
+    border: 1px solid white;
     float: right;
 }
 
@@ -463,6 +465,21 @@ form .full-input{
     height: calc((800/560)*315px);
     margin: 64px 0;
     box-shadow: 0 0 15px #333;
+}
+
+@media (max-width: 1023.5px) and (min-width: 740px) {
+    .video-cover iframe{
+        width: 92vw;
+        height: calc((315/560)*(92vw));
+        margin: 32px auto;
+    }
+    #perform{
+        width: 100%;
+        padding: 0;
+    }
+    .place-item .address{
+        height: 64px;
+    }
 }
 
 .video-cover p.description{
