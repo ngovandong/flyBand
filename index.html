@@ -8,9 +8,10 @@
     <link rel="icon" type="image/png" href="assets\image\icon.png"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets\css\styles.css">
+    <link rel="stylesheet" href="assets\css\responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -22,7 +23,7 @@
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#perform">Perform</a></li>
                 <li>
-                    <a href="">More
+                    <a href="#">More
                         <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="subnav">
@@ -35,6 +36,9 @@
         </nav>
         <div class="search">
             <i class="fa fa-search"></i>
+        </div>
+        <div class="mobile-menu grey-hover">
+            <i class="fa fa-bars "></i>
         </div>
     </header>
     <main>
@@ -50,31 +54,31 @@
                 <p class="subhead">"Gần mực thì đen gần âm nhạc thì tỏa sáng"</p>
                 <p class="introduce">Flyband được thành lập vào năm 2015 với mục đích kết nối đam mê và trao dồi kĩ năng âm nhạc. Band xuất thân từ một band nhạc nhỏ ở Quảng Nam. Cái tên Fly band có ý nghĩa như là sự thăng hoa bay bổng trong âm nhạc của các chàng trai. Sau một thời gian dài hoạt động thì đã bắt đầu gặt hái được nhiều thành công và giải thưởng tại một vài cuộc thi lớn nhỏ. Flyband theo đuổi dòng nhạc đa dạng phù hợp với từng chương trình mình tham gia từ những bản nhạc acoustic nhẹ nhàng đến những bản nhạc rock sôi động.</p>
                 <div class="band">
-                    <div class="people">
+                    <div class="people one-col">
                         <p>
                             Leader Ngô Lâm
                         </p>
                         <img src="assets\image\lam2.jpg" alt="">
                     </div>
-                    <div class="people">
+                    <div class="people one-col">
                         <p>
                             Chord Văn Đông
                         </p>
                         <img src="assets\image\dong2.jpg" alt="">
                     </div>
-                    <div class="people">
+                    <div class="people one-col">
                         <p>
                             Cajon Quốc Bùi
                         </p>
                         <img src="assets\image\quoc2.png" alt="">
                     </div>
-                    <!-- <div class="people">
+                    <!-- <div class="people one-col">
                         <p>
                             Cajon Quốc Bùi
                         </p>
                         <img src="assets\image\bandmember.jpg" alt="">
                     </div>
-                    <div class="people">
+                    <div class="people one-col">
                         <p>
                              Voical Chương Hugo
                         </p>
@@ -213,8 +217,30 @@
         const closes= document.querySelectorAll(".js-close-modal");
         const modal =document.querySelector(".js-modal");
         const modalContainer =document.querySelector(".js-modal-container");
+        const header= document.querySelector("header");
+        const mobileMenu= document.querySelector(".mobile-menu");
+        const headerHeight= header.clientHeight;
+        const menuItems= document.querySelectorAll("nav li a[href*='#']");
 
-
+        mobileMenu.onclick= ()=>{
+            const isClose= header.clientHeight===headerHeight;
+            if(isClose){
+                header.style.height="auto";
+            }else{
+                header.style.height= null;
+            }
+        }
+        
+        for(let item of menuItems){
+            const notsub= !item.nextElementSibling;
+            item.onclick=(event)=>{
+                if(notsub){
+                    header.style.height= null;
+                }else{
+                    event.preventDefault();
+                }
+            }
+        }
 
         const showBox= ()=>{
             modal.classList.add("open");

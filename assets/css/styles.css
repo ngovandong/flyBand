@@ -63,7 +63,7 @@ nav li:hover > a{
     
 }
 
-header .search{
+header .search, header .mobile-menu{
     float: right;
     height: 100%;
     padding: 12px 24px;
@@ -74,7 +74,9 @@ header .search:hover{
     cursor: pointer;
 }
 
-
+header .mobile-menu{
+    display: none;
+}
 
 .slider{
     width: 100%;
@@ -162,8 +164,7 @@ header .search:hover{
 .band img{
     margin-bottom: 16px;
     border-radius: 4px;
-    width: 180px;
-    height: 200px;
+    width: 60%;
 }
 
 .band p{
@@ -189,9 +190,15 @@ header .search:hover{
 
 .blackBackground{
     width: 100%;
-    margin: 0 auto 64px;
+    margin: 0 auto;
+    padding-top: 32px;
 }
 
+.cover-detail::after {
+    content: "";
+    display: table;
+    clear: both;
+}
 .blackBackground::after{
     content: "";
     display: table;
@@ -222,7 +229,6 @@ header .search:hover{
     margin: 32px -8px 0;
 }
 .place img{
-    height: 184px;
     width: 100%;
     background-size: contain;
     display: block;
@@ -298,17 +304,12 @@ header .search:hover{
 }
 .modal-container{
     background-color: white;
-    width: 600px;
+    width: 900px;
     min-height: 400px;
     box-shadow: 0 0 10px rgb(59, 57, 57);
     animation: modalFadeIn ease 0.5s;
 }
 
-@media (min-width: 993px){
-    .modal-container {
-        width: 900px;
-    }
-}
 
 
 .modal-container header{
@@ -467,20 +468,6 @@ form .full-input{
     box-shadow: 0 0 15px #333;
 }
 
-@media (max-width: 1023.5px) and (min-width: 740px) {
-    .video-cover iframe{
-        width: 92vw;
-        height: calc((315/560)*(92vw));
-        margin: 32px auto;
-    }
-    #perform{
-        width: 100%;
-        padding: 0;
-    }
-    .place-item .address{
-        height: 64px;
-    }
-}
 
 .video-cover p.description{
     border-bottom: 1px solid #009688;
