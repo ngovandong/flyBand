@@ -144,26 +144,21 @@ header .mobile-menu{
 
 
 
-.about .people{
-    float: left;
-    display: block;
-    width: 33.33%;
+.flex-item{
+    width: 30%;
+    padding: 12px 0;
 }
 
 
-
-
-.band{
-    display: block;
+.flex-container{
+    display: flex;
     padding: 32px 0;
-    
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
-.band::after{
-    content: "";
-    display: table;
-    clear: both;
+.band{
+    padding-bottom: 0;
 }
-
 .band img{
     margin-bottom: 16px;
     border-radius: 4px;
@@ -229,8 +224,13 @@ header .mobile-menu{
 }
 
 .place{
-    margin: 32px -8px 0;
+    justify-content: space-between;
 }
+
+.place-item{
+    width: 32%;
+}
+
 .place img{
     width: 100%;
     background-size: contain;
@@ -246,23 +246,10 @@ header .mobile-menu{
     color: black;
     background-color: white;
     padding: 0.15px 16px;
-}
-
-.place .place-item{
-    width: 33.2%;
-    float: left;
-    padding: 0 8px;
-    margin-bottom: 16px;
     text-align: left;
 }
 
 
-
-.booking .place::after{
-    content: "";
-    display: table;
-    clear: both;
-}
 
 .place .Name{
     font-weight: bolder;

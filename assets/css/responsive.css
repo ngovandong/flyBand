@@ -1,5 +1,5 @@
 
-@media (max-width: 1023.5px) and (min-width: 740px) {
+@media (max-width: 1024px) and (min-width: 740px) {
     .video-cover iframe{
         width: 92vw;
         height: calc((315/560)*(92vw));
@@ -20,7 +20,7 @@
     }
 }
 
-@media (max-width: 739.5px) {
+@media (max-width: 740px) {
    nav li{
        display: block;
    } 
@@ -56,18 +56,16 @@
         background-color: black;
         padding-left: 40px;
    }
-   .band .one-col{
-       margin-top: 30px;
-       width: 100%;
-       
-   }
    
 
-   .place .place-item{
+    .flex-container{
+        flex-direction: column;
+    }
+
+   .flex-item{
        width: 100%;
-       float: none;
-       margin: 32px auto;
    }
+
    .about .introduce{
     padding: 0 16px;
     }
