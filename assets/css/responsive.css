@@ -1,5 +1,5 @@
 
-@media (max-width: 1024px) and (min-width: 740px) {
+@media (max-width: 1024px)  {
     .video-cover iframe{
         width: 92vw;
         height: calc((315/560)*(92vw));

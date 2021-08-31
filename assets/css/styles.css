@@ -48,10 +48,13 @@ nav a{
     height: 46px;
     padding: 12px 24px;
 }
-
-nav .subnav a{
+nav .subnav a {
     color: black;
     min-width: 160px;
+    width: 100%;
+}
+li.subli {
+    width: 100%;
 }
 
 nav li:hover > a{
