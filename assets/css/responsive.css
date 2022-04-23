@@ -93,5 +93,7 @@
     footer{
         padding: 32px;
     }
-
+    .dot{
+        display: none;
+    }
 }
